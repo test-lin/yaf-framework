@@ -1,0 +1,27 @@
+{
+	"name": "test-lin/yaf",
+    "description": "The DIY yaf Framework.",
+    "keywords": ["framework", "yaf"],
+	"license": "MIT",
+    "type": "project",
+	"require": {
+		"php": ">=7.0",
+		"ext-yaf": "^3.0",
+		"ext-json": "*",
+		"topthink/think-orm": "^1.2",
+		"topthink/think-validate": "^1.0",
+		"topthink/think-cache": "^1.0",
+		"topthink/think-log": "^1.0",
+		"psr/log": "^1.1.0"
+	},
+	"autoload": {
+        "psr-4": {
+			"app\\": "application/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('conf/application.ini') || copy('conf/application-dev.ini', 'conf/application.ini');\""
+        ]
+    }
+}
