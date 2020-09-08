@@ -4,6 +4,7 @@
 
 * php7.0+
     * yaf
+    * yar
 * composer
 
 ## 安装
@@ -18,7 +19,7 @@ composer create-project --prefer-dist test-lin/yaf blog
 server {
     listen 80;
     root   /var/www/yaf-framework/public;
-    server_name demo.me www.demo.me;
+    server_name www.yaf.com;
     index  index.php;
 
     charset utf-8;
@@ -40,10 +41,6 @@ server {
     }
 }
 ```
-
-2、框架配置
-
-conf/application.ini 不存在则复制 conf/application-dev.ini 并进行配置
 
 ## 开发规范
 
